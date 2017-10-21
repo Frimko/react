@@ -2,6 +2,7 @@ import React from 'react';
 import { Table, Button } from 'react-bootstrap';
 import PropTypes from 'prop-types';
 import styled from "styled-components";
+import {Helmet} from "react-helmet";
 
 import TableRow from 'components/TableRow';
 import DefaultModal from 'components/DefaultModal';
@@ -18,6 +19,7 @@ const ToOneLine = styled.div`
 
 const Page = (props) => (
     <div>
+        <Helmet title={props.title}/>
         <ToOneLine>
             <h1>{props.title} list</h1>
             <div><Button onClick={props.onShowAddModal}>Create</Button></div>
